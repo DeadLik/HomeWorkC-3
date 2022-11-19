@@ -23,9 +23,7 @@ double yb = Convert.ToDouble(Console.ReadLine());
 Console.Write("Координаты точки z: ");
 double zb = Convert.ToDouble(Console.ReadLine());
 
-double Distance(double x1, double y1,
-                double z1, double x2,
-                double y2, double z2)
+double Distance(double x1, double y1, double z1, double x2, double y2, double z2)
 {
     double res1 = (x2 - x1) * (x2 - x1);
     double res2 = (y2 - y1) * (y2 - y1);
@@ -34,8 +32,6 @@ double Distance(double x1, double y1,
     return Math.Sqrt(result);
 }
 
-double distance = Distance(xa, ya,
-                           za, xb,
-                           yb, zb);
+double distance = Distance(xa, ya, za, xb, yb, zb);
 
 Console.WriteLine(Math.Round(distance, 2, MidpointRounding.ToZero));
